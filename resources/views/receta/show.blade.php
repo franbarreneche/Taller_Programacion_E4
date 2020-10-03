@@ -14,7 +14,7 @@
           </div>
         </div>
         <a href="{{route('recetas')}}">Volver</a>
-        <form action="/recetas/{{$receta->id}}" method="POST">
+        <form action="{{route('recetas.destroy',$receta->id)}}" method="POST">
           @csrf
           @method("DELETE")
           <button type="summit" value="Eliminar" class="btn btn-danger">Eliminar</button>

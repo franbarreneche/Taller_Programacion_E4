@@ -24,6 +24,6 @@ Route::get('/recetas/create',[RecetaController::class,'create'])->name('recetas.
 
 Route::post('/recetas/store',[RecetaController::class,'store'])->name('recetas.store');
 
-Route::get('/recetas/{id}',[RecetaController::class,'show']);
+Route::get('/recetas/{id}',[RecetaController::class,'show'])->name('recetas.show');
 
-Route::delete('/recetas/{id}',[RecetaController::class,'destroy']);
+Route::delete('/recetas/{id}',[RecetaController::class,'destroy'])->name('recetas.destroy');

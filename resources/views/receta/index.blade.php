@@ -15,7 +15,7 @@
         <p class="lead">A conitunación le mostramos una lista cuarda de las mejores recetas de comida alemana.</p>
         <ul>
           @foreach($recetas as $receta)
-          <li><a href="recetas/{{$receta->id}}">{{$receta->nombre}}</a></li>
+          <li><a href="{{route('recetas.show',$receta->id)}}">{{$receta->nombre}}</a></li>
           @endforeach
         </ul>
         <a href="{{route('recetas.create')}}" class="btn btn-primary">Agregar</a>
